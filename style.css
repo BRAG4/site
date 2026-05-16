@@ -297,3 +297,26 @@ body::before {
   color: #aaa;
   font-size: 14px;
 }
+
+.titulo-plano {
+  font-size: 42px;
+  color: #ffcc00;
+  margin-bottom: 15px;
+  text-align: center;
+  letter-spacing: 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* ÍCONE */
+.titulo-plano i {
+  font-size: 36px;
+}
+
+/* efeito leve */
+.titulo-plano {
+  text-shadow: 0 0 15px rgba(255,204,0,0.4);
+}
