@@ -1,11 +1,10 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: #000;
+  background: radial-gradient(circle at top, rgba(255,204,0,0.08), #000 60%);
   color: #fff;
 }
 
-/* FUNDO COM GLOW */
 .glow-bg {
   position: fixed;
   width: 600px;
@@ -153,4 +152,21 @@ body {
   padding: 15px;
   border-radius: 10px;
   display: none;
+}
+
+.beneficios {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.beneficios span {
+  background: #111;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #222;
 }

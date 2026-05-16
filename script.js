@@ -1,4 +1,4 @@
-const nomes = ["Lucas", "Ana", "Pedro", "Julia"];
+const nomes = ["Rodrigo", "Ana", "Pedro", "Julia"];
 
 function popup() {
   const el = document.getElementById("popup");
