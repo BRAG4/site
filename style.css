@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: radial-gradient(circle at top, #111 0%, #000 100%);
+  font-family: Arial;
+  background: radial-gradient(circle at top, #111, #000);
   color: #fff;
 }
 
@@ -10,12 +10,11 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 20px 40px;
-  align-items: center;
 }
 
 .logo {
-  font-weight: bold;
   color: #ffcc00;
+  font-weight: bold;
 }
 
 .btn-topo {
@@ -24,18 +23,16 @@ body {
   padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
-  font-weight: bold;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 120px 20px;
+  padding: 100px 20px;
 }
 
 .hero h1 {
-  font-size: 50px;
-  line-height: 1.2;
+  font-size: 48px;
 }
 
 .hero span {
@@ -44,24 +41,34 @@ body {
 
 .hero p {
   color: #aaa;
-  margin: 20px 0;
 }
 
+/* BOTÃO */
 .btn-main {
   background: linear-gradient(45deg, #ffcc00, #ffaa00);
   color: #000;
   padding: 15px 30px;
   border-radius: 10px;
   text-decoration: none;
-  font-weight: bold;
   display: inline-block;
   margin-top: 20px;
-  box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
-  transition: 0.3s;
+  box-shadow: 0 0 20px rgba(255,204,0,0.5);
 }
 
-.btn-main:hover {
-  transform: scale(1.05);
+/* BOX */
+.box {
+  width: 200px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 2px solid #ffcc00;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255,204,0,0.3);
+}
+
+.box i {
+  font-size: 40px;
+  color: #ffcc00;
 }
 
 /* STATS */
@@ -72,51 +79,56 @@ body {
   text-align: center;
 }
 
-.stat h2 {
+.stat i {
+  font-size: 30px;
   color: #ffcc00;
 }
 
-/* MODULOS */
-.modulos {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.modulos h2 {
-  margin-bottom: 30px;
-}
-
+/* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
   gap: 20px;
 }
 
 .card {
   background: #111;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 10px;
+  text-align: center;
   border: 1px solid #222;
-  transition: 0.3s;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.5s;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  border-color: #ffcc00;
+.card i {
+  color: #ffcc00;
+  font-size: 30px;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* CTA */
 .cta {
   text-align: center;
-  padding: 80px 20px;
+  padding: 80px;
 }
 
 /* CONTATO */
 .contato {
   background: #111;
-  padding: 40px;
   margin: 40px;
-  border-radius: 12px;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.contato i {
+  color: #ffcc00;
 }
 
 footer {
