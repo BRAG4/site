@@ -1,23 +1,21 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: #000;
   color: #fff;
-  position: relative;
+  background: radial-gradient(circle at top, rgba(255,204,0,0.08), #000 60%),
+              radial-gradient(circle at bottom, rgba(255,204,0,0.05), #000 70%);
   overflow-x: hidden;
 }
 
-/* FUNDO COM VIDA */
 body::before {
   content: "";
   position: fixed;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(255,204,0,0.06), transparent 70%);
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  filter: blur(100px);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255,204,0,0.08), transparent 70%);
+  top: -200px;
+  left: -200px;
+  filter: blur(120px);
   z-index: -1;
 }
 
@@ -350,39 +348,84 @@ body::after {
 /* RESPONSIVO */
 @media (max-width: 768px) {
 
+  /* GERAL */
+  body {
+    overflow-x: hidden;
+  }
+
   .container {
     padding: 15px;
   }
 
+  /* HEADER */
   .header {
-    flex-direction: column;
-    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
+
+  .btn-topo {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 40px 10px;
     text-align: center;
   }
 
   .hero h1 {
-    font-size: 26px;
+    font-size: 24px;
+    line-height: 1.3;
+    word-break: break-word;
   }
 
   .titulo-plano {
-    font-size: 26px;
+    font-size: 20px;
   }
 
+  .hero p {
+    font-size: 14px;
+  }
+
+  /* GRID */
   .grid {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1fr; /* 1 coluna no mobile */
+    gap: 15px;
   }
 
   .card {
     width: 100%;
+    padding: 15px;
   }
 
-  .cta h2 {
-    font-size: 22px;
-  }
-
+  /* BOTÕES */
   .btn-main {
     width: 100%;
-    text-align: center;
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  /* CTA */
+  .cta h2 {
+    font-size: 20px;
+  }
+
+  .cta h3 {
+    font-size: 18px;
+  }
+
+  /* STATS */
+  .stats {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
   }
 
 }
