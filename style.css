@@ -1,19 +1,37 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: radial-gradient(circle at top, rgba(255,204,0,0.08), #000 60%);
+  background: #000;
   color: #fff;
+  position: relative;
+  overflow-x: hidden;
 }
 
-.glow-bg {
+/* GLOW BONITO (NÃO BUGA) */
+body::before {
+  content: "";
   position: fixed;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(255,204,0,0.15), transparent);
-  top: -100px;
-  left: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255,204,0,0.12), transparent 70%);
+  top: -150px;
+  left: -150px;
   z-index: -1;
+  filter: blur(80px);
 }
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,204,0,0.08), transparent 70%);
+  bottom: -150px;
+  right: -150px;
+  z-index: -1;
+  filter: blur(80px);
+}
+
 
 .container {
   max-width: 1100px;
@@ -64,6 +82,10 @@ body {
   color: #000;
   text-decoration: none;
   box-shadow: 0 0 20px rgba(255,204,0,0.4);
+}
+
+.btn-main:hover {
+  transform: translateY(-3px);
 }
 
 /* PLANOS */
@@ -166,7 +188,16 @@ body {
 
 .beneficios span {
   background: #111;
-  padding: 8px 12px;
+  padding: 10px 14px;
   border-radius: 8px;
   border: 1px solid #222;
+  transition: 0.3s;
+  cursor: default;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.beneficios span:hover {
+  transform: translateY(-5px);
+  border-color: #ffcc00;
+  box-shadow: 0 0 15px rgba(255,204,0,0.2);
 }
