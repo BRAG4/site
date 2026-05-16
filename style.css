@@ -31,30 +31,44 @@ body::before {
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
-.logo { color: #ffcc00; }
+/* LADO ESQUERDO */
+.logo {
+  color: #ffcc00;
+  font-weight: bold;
+  font-size: 18px;
 
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo i {
+  font-size: 18px;
+}
+
+/* BOTÃO DIREITO */
 .btn-topo {
-  display: inline-block;
   background: linear-gradient(45deg, #ffcc00, #ffaa00);
   color: #000;
-  padding: 10px 18px;
+  padding: 8px 16px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
 
-  /* IMPORTANTE */
   width: auto;
   height: auto;
+  display: inline-block;
 
-  box-shadow: 0 0 10px rgba(255,204,0,0.3);
   transition: 0.3s;
 }
 
 .btn-topo:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 20px rgba(255,204,0,0.6);
+  box-shadow: 0 0 15px rgba(255,204,0,0.5);
 }
 
 /* HERO */
