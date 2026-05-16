@@ -1,20 +1,19 @@
 body {
   margin: 0;
   font-family: Arial;
-  color: #000000;
-  background: radial-gradient(circle at top, rgba(255,204,0,0.08), #000 60%),
-              radial-gradient(circle at bottom, rgba(255,204,0,0.05), #000 70%);
+  color: #fff;
+  background: #000;
   overflow-x: hidden;
 }
 
 body::before {
   content: "";
   position: fixed;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(255, 204, 0, 0.233), transparent 70%);
-  top: -200px;
-  left: -200px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255,204,0,0.06), transparent 70%);
+  top: -150px;
+  left: -150px;
   filter: blur(120px);
   z-index: -1;
 }
@@ -24,10 +23,10 @@ body::after {
   position: fixed;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(255,204,0,0.05), transparent 70%);
-  bottom: 0;
-  right: 0;
-  filter: blur(100px);
+  background: radial-gradient(circle, rgba(255,204,0,0.04), transparent 70%);
+  bottom: -100px;
+  right: -100px;
+  filter: blur(120px);
   z-index: -1;
 }
 
